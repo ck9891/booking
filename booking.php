@@ -21,8 +21,7 @@
 	</div>
 </section>
 <form action="" id="msform">
-    <div>
-<fieldset class="tab">
+<fieldset class="tab active" >
 <section id="travelDates" class="page-section">
 	<h2 class="section-title">Book Your Own Yacht</h2>
 	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
@@ -61,21 +60,33 @@
 	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
 	<p class="sub-title blue-text">Use the Toggle to view alternative options.(?)</p>
 	<div class="slider-container">
-		<div class="row">
-			<div class="col-6">yo this is yacht pics</div>
+		<div class="row slider-row-padding">
+			<div class="col-6">
+                <div class="yacht-featured">
+                    <img src="img/feature-boat.png" alt="featured yacht image" />
+                </div>
+                <div class="row">
+                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                </div>
+            </div>
 			<div class="col-6 yacht-details">
 				<h3 class="yacht-title">Yacht Option #1</h3>
-				<p class="yacht-text starting-price orange-text">
-					Starting at $XXXX
-				</p>
-				<p class="blue-text yacht-text">Description:</p>
-				<p class="yacht-description-text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas. 
-				</p>
-				<p class="blue-text yacht-text">Sleeps:</p>
-				<p class="yacht-description-text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-				</p>
+                <div class="indent">
+                    <p class="yacht-text starting-price orange-text">
+                        Starting at $XXXX
+                    </p>
+                    <p class="blue-text yacht-text">Description:</p>
+                    <p class="yacht-description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas. 
+                    </p>
+                    <p class="blue-text yacht-text">Sleeps:</p>
+                    <p class="yacht-description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p>
+                </div>
 				<div class="yacht-more-info">
 					<a href="#" class="wayv-btn orange-bg blue-hover">More Info</a>
 					<a href="#" class="wayv-btn orange-bg blue-hover">Select this yacht</a>
@@ -85,10 +96,11 @@
 	</div>
 </section>
 	<section id="personalizeExp" class="page-section">
-		<h2 class="section-title">Personalize Your Experience</h2>
-		<p class="sub-title">Make it A trip of a lifetime.</p>
+		
 		<div class="row">
 			<div class="col-6 additions">
+                <h2 class="section-title">Personalize Your Experience</h2>
+		        <p class="sub-title blue-text">Make it A trip of a lifetime.</p>
                 <ul>
                     <li><input type="checkbox" name="add-hostess" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
                     <li><input type="checkbox" name="add-hostess" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
@@ -101,13 +113,21 @@
 			<div class="col-6 booking-overview">
 				<h3 class="yacht-title">	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />Overview</h3>
 				<div class="yacht-selection">
-					<img alt="yacht" class="yacht-selection-img" />
-					<h4 class="blue-text">Yacht Option #1</h4>
-					<p class="blue-text">Destination:</p>
-					<p class="orange-text">Thailand</p>
-					<p class="yacht-description-text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas. 
-					</p>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/boat-booking.png" alt="yacht" class="yacht-selection-img" />
+                        </div>
+                        <div class="col-6 margin-more yacht-booking-details">
+                            <h4 class="blue-text">Yacht Option #1</h4>
+                            <p class="blue-text">Destination:</p>
+                            <p class="orange-text">Thailand</p>
+                            
+                        </div>
+                        
+                    </div>
+                    <p class="yacht-description-text grey-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas. 
+                            </p>
 				</div>
 				<ul id="addOn">
 					<li><span class="blue-text">Add On:</span></li>
@@ -116,10 +136,10 @@
 					<li><span class="blue-text">Add On:</span></li>
 					<li><span class="blue-text">Add On:</span></li>
 				</ul>
-				<div class="total">
+				<div class="total dark-blue-bg">
 					<p class="white-text">Total: $XXXX USD</p>
 				</div>
-				<div class="per-person">
+				<div class="per-person orange-bg">
 					<p class="white-text">Per Person Total: $XXXX USD</p>
 				</div>
 			</div>
@@ -133,7 +153,8 @@
 		<h2 class="section-title">Lead Traveller Information</h2>
 		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas.</p>
-		<div class="col-8 offset-2">
+		<div class="row">
+            <div class="col-6 offset-3">
 			<p>
 				<input type="text" name="firstname" value="First Name" id="firstName">
 				<input type="text" name="lastname" value="Last Name" id="lastName">
@@ -304,7 +325,7 @@
           <option value="1901">1901</option>
           <option value="1900">1900</option>
      </select>
-     		<input type="number" value="age" id="age" />
+     		<input type="text" value="age" id="age" />
 			</p>
 			<p>
 				<input type="radio" name="gender" value="male" checked> Male
@@ -842,18 +863,19 @@
 </select>
 			</p>
 		</div>
-		<div class="add-traveller">
-			<p>
-				Add Traveller <span>+</span>
+		</div>
+        <div class="add-traveller orange-bg">
+			<p class="white-text">
+				Add Traveller <span class="light-blue-text">+</span>
 			</p>
 		</div>
-		<div class="invite-friends">
-			<p>
-				Invite Friends via Facebook <span>+</span>
+		<div class="invite-friends dark-blue-bg">
+			<p class="white-text">
+				Invite Friends via Facebook <span class="light-blue-text">+</span>
 			</p>
 		</div>
 	</section>
-	<a href="#" class="orange-bg blue-hover white-text">
+	<a href="#" class=" wayv-btn orange-bg blue-hover white-text">
 		Proceed to Confirmation
 	</a>
 </fieldset>
@@ -863,8 +885,18 @@
 		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
 		<p class="sub-title blue-text">October 14 - October 21, 2018</p>
 		<div class="row">
-			<div class="col-6">pics</div>
 			<div class="col-6">
+                <div class="yacht-featured">
+                    <img src="img/feature-boat.png" alt="featured yacht image" />
+                </div>
+                <div class="row">
+                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                </div>
+            </div>
+			<div class="col-6 yacht-confirmation-details">
 				<h3 class="yacht-title">The Marilynn</h3>
 				<p class="yacht-text starting-price orange-text">
 					Cost Per Person: $XXXX
@@ -885,7 +917,8 @@
 		</div>
 	</section>
 	<section class="page-section" id="yachtInfo">
-		<div class="row">
+		<div class="wrapper-900">
+        <div class="row">
 			<div class="col-6">
 				<h3 class="blue-text">What's Included</h3>
 				<ul id="included">
@@ -899,23 +932,30 @@
 					<li>Stereo & cockpit speakers</li>
 					<li>Final Cleaning of the Yacht</li>
 				</ul>
-				<h3 class="blue-text">Security Deposit</h3>		
-				<p>Usually Thailand is a no visa requirement for stay under 30 days. For longer stays, visitors can apply for a 2 x 2 month Visa in any Thai embassy in the world..</p>		
+					
 			</div>
 			<div class="col-6">
 					<h3 class="blue-text">Vessel Layout</h3>
 					<img src="#" alt="vessel layout">
 					<a href="#" class="wayv-btn blue-bg orange-hover white-text">Download Full Specs</a>
 					<h3 class="blue-text">Sleeping Arrangements</h3>
-					<p>This yacht sleeps up to 12 people:</p>
-					<ul>
+					<p class="grey-text yacht-text-smaller">This yacht sleeps up to 12 people:</p>
+					<ul class="grey-text">
 						<li>4 double cabins: 8 spots</li>
 						<li>1 bunk bed cabin: 2 spots</li>
 						<li>1 saloon: 1 spot</li>
 						<li>1 skipper cabin: 1 spot (for WAYV staff)</li>
 					</ul>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                <h3 class="blue-text">Security Deposit</h3>		
+				<p class="grey-text">Usually Thailand is a no visa requirement for stay under 30 days. For longer stays, visitors can apply for a 2 x 2 month Visa in any Thai embassy in the world..</p>	
+                </div>
+                <div class="col-6">
 					<h3 class="blue-text">Extras</h3>
-					<p>Usually Thailand is a no visa requirement for stay under 30 days. For longer stays, visitors can apply for a 2 x 2 month Visa in any Thai embassy in the world..</p>
+					<p class="grey-text yacht-text-smaller">Usually Thailand is a no visa requirement for stay under 30 days. For longer stays, visitors can apply for a 2 x 2 month Visa in any Thai embassy in the world..</p>
 			</div>
 		</div>
 		<div class="row">
@@ -931,12 +971,14 @@
 			</div>
 
 		</div>
+     </div>
 	</section>
 	<section class="page-section" id="AddOns">
+        <div class="wrapper-900">
 		<h2 class="section-title vacation-name">Add-Ons</h2>
 		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
 		<p class="sub-title blue-text">October 14 - October 21, 2018</p>
-		<table class="no-border blue-text" id="addonTable">
+		<table class="no-border blue-text" cellspacing="0" id="addonTable">
 					<tr class="due-today">
 						<td class="blue-text">Add On:</td>
 						<td>Add Skipper/Hostess</td>
@@ -948,16 +990,16 @@
 						<td class="orange-text">[+100](?)</td>
 					</tr>
 					<tr>
-						<<td class="blue-text">Add On:</td>
+						<td class="blue-text">Add On:</td>
 						<td>Add Skipper/Hostess</td>
 						<td class="orange-text">[+100](?)</td>
 					</tr>
-					<tr class="blue-bg"><td class="white-text" colspan="2">Total Cost of Add-ons:</td>
+					<tr class="dark-blue-bg total-row"><td class="white-text text-left" colspan="2">Total Cost of Add-ons</td>
 						<td class="white-text">$XXXX USD</td></tr>
-					<tr class="orange-bg"><td class="white-text" colspan="2">Total Cost of Add-ons Per Person</td>
+					<tr class="orange-bg total-row"><td class="white-text text-left" colspan="2">Total Cost of Add-ons Per Person</td>
 						<td class="white-text">$XXXX USD</td></tr>
-				</table>		
-	</section>
+				</table>	
+            </div>
 	</section>
 </fieldset>
 <fieldset class="tab">
@@ -1022,4 +1064,10 @@
     </div>
 </form>
 </body>
+<script>
+    $('.tab').click( function() {
+        $(this).removeClass('active');
+        $(this).next().addClass('active');
+    });
+</script>
 </html>
