@@ -26,7 +26,7 @@ body {
 	background-color:#f15f25;
 }
 .grey-bg {
-	background-color: #ccc;
+	background-color: #f4f4f4;
 }
 .orange-hover:hover {
 	background-color:#f15f25;
@@ -91,7 +91,7 @@ fieldset {
     padding: 20px 0;
 }
 .wayv-btn {
-    padding: 15px 45px;
+    padding: 10px 40px;
     text-transform: uppercase;
     -webkit-border-top-right-radius: 75px;
     -webkit-border-bottom-left-radius: 75px;
@@ -112,9 +112,12 @@ input {
 }
 #msform input, #msform textarea {
 	padding: 15px;
-	border: 1px solid #ccc;
+    border: 1px solid #f1f1f1;
+    background-color: #f1f1f1;
 	margin-bottom: 10px;
 	box-sizing: border-box;
+    font-size: .9rem;
+    color: #b0b4b5;
 }
 #msform {
 	margin: 50px auto;
@@ -122,10 +125,7 @@ input {
 	position: relative;
 }
 #msform fieldset {
-	background: white;
-	border: 0 none;
-	border-radius: 3px;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	border:none;
 	box-sizing: border-box;
 	padding:0;
 	/*stacking fieldsets above each other*/
@@ -443,4 +443,157 @@ padding:.5rem 0;
 
 .text-left {
     text-align: left;
+}
+
+#costBreakdown {
+    text-align: left;
+    border-bottom: none;
+}
+
+#costBreakdown h2 {
+    text-align: center;
+    
+    
+    
+}
+#costBreakdown h3 {
+    margin: 0;
+}
+#costBreakdown .sub-title {
+    text-align: center;
+}
+
+#breakdown-crew {
+    margin:0;
+    padding:0;
+}
+
+#breakdown-crew li {
+    list-style: none;
+    padding: 1.5rem 1rem 1.5rem 2rem;
+}
+
+#breakdown-travellers {
+    margin:0;
+    padding:0;
+}
+
+#breakdown-travellers li {
+    list-style: none;
+    padding: 1.5rem 1rem 1.5rem 2rem;
+}
+
+.disclaimer-text {
+    text-align: center;
+    max-width: 600px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+#paymentInstructions h2{
+    padding: 1rem 0;
+}
+
+.sand-border {
+    border-bottom: 30px solid #f1dbbc;
+}
+
+#paymentTable {
+    width: 700px;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+#paymentTable tr:nth-child(odd){
+    background-color: #f4f4f4;
+    
+    
+}
+
+#paymentTable td {
+    padding: .5rem .5rem .5rem 2rem;
+}
+
+.due-today {
+    font-weight: 700;
+}
+
+#paymentInstructions {
+    padding-bottom: 40px;
+}
+
+.steps {
+    padding: 2rem 1rem;
+}
+
+#paypalPayment {
+    padding-bottom: 60px;
+    border-bottom: none;
+}
+
+.slide-container:before {
+    width: 14px;
+    height: 24px;
+    background-image: url(img/arrow-back.png);
+    position: absolute;
+    top:50%;
+}
+.slide-container:after {
+    width: 14px;
+    height: 24px;
+    background-image: url(img/arrow-forward.png);
+}
+
+.yacht-featured img {
+    max-width: 100%;
+    
+}
+
+.other-images img {
+    max-width: 97.5%;
+    
+}
+
+#setIndicator {
+    margin:0 auto;
+    padding: 0;
+}
+#setIndicator li {
+    float: left;
+    list-style: none;
+    margin-left: 1.25rem;
+    padding-left: 1.25rem;
+}
+
+#setIndicator li:before {
+    content: ">";
+    padding-right: 2.5rem;
+}
+#setIndicator li:first-child:before {
+    content:none;   
+}
+#setIndicator:after {
+    clear: both;
+    display: table;
+    content: ' ';
+}
+
+.header-section {
+    position: relative;
+}
+
+.header-section img{
+    width: 100%;
+    display: block;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
 }

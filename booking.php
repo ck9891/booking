@@ -15,12 +15,26 @@
 
 </head>
 <body>
+   
 <section class="header-section">
+    <img src="img/booking-banner1.png" />
 	<div class="text-container">
 		<h1 class="white-text">Book Your Own Yacht</h1>
 	</div>
 </section>
-<form action="" id="msform">
+<section class="steps dark-blue-bg">
+    <div class="wrapper-900">
+    <ul id="setIndicator" class="white-text">
+        <li>Dates</li>
+        <li>Yacht</li>
+        <li>Personalize</li>
+        <li>Traveller Info</li>
+        <li>Confirmation</li>
+        <li>Payment</li>
+    </ul>
+    </div>
+</section>
+<form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="msform">
 <fieldset class="tab active" >
 <section id="travelDates" class="page-section">
 	<h2 class="section-title">Book Your Own Yacht</h2>
@@ -59,13 +73,14 @@
 	<h2 class="section-title">Select Your Yacht Style</h2>
 	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
 	<p class="sub-title blue-text">Use the Toggle to view alternative options.(?)</p>
-	<div class="slider-container">
+    <div class="wrapper-900">
+	<div class="slide-container">
 		<div class="row slider-row-padding">
 			<div class="col-6">
                 <div class="yacht-featured">
                     <img src="img/feature-boat.png" alt="featured yacht image" />
                 </div>
-                <div class="row">
+                <div class="row other-images">
                     <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
                     <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
                     <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
@@ -94,6 +109,7 @@
 			</div>
 		</div>
 	</div>
+        </div>
 </section>
 	<section id="personalizeExp" class="page-section">
 		
@@ -102,12 +118,12 @@
                 <h2 class="section-title">Personalize Your Experience</h2>
 		        <p class="sub-title blue-text">Make it A trip of a lifetime.</p>
                 <ul>
-                    <li><input type="checkbox" name="add-hostess" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
+                    <li><input type="checkbox" name="add-hostess1" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
+                    <li><input type="checkbox" name="add-hostess2" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
+                    <li><input type="checkbox" name="add-hostess3" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
+                    <li><input type="checkbox" name="add-hostess4" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
+                    <li><input type="checkbox" name="add-hostess5" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
+                    <li><input type="checkbox" name="add-hostess6" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
                 </ul>
 			</div>
 			<div class="col-6 booking-overview">
@@ -145,7 +161,8 @@
 			</div>
 		</div>
 	</section>
-	<input type="button" name="next" class="wayv-btn next blue-bg orange-hover white-text" value="Proceed to Traveller Info">
+	<!--<input type="button" name="next" class="wayv-btn next blue-bg orange-hover white-text" value="Proceed to Traveller Info">-->
+    <a href="#" class="next-form wayv-btn next blue-bg orange-hover white-text">Proceed to Traveller Info</a>
 		
 </fieldset>
 <fieldset class="tab">
@@ -160,9 +177,9 @@
 				<input type="text" name="lastname" value="Last Name" id="lastName">
 			</p>
 			<p>
-				DOB <select id='gMonth2' >
+				DOB <select id='gMonth2' name="gMonth2" >
 					    <option value=''>--Select Month--</option>
-					    <option selected value='1'>Janaury</option>
+					    <option selected value='1'>January</option>
 					    <option value='2'>February</option>
 					    <option value='3'>March</option>
 					    <option value='4'>April</option>
@@ -325,7 +342,7 @@
           <option value="1901">1901</option>
           <option value="1900">1900</option>
      </select>
-     		<input type="text" value="age" id="age" />
+     		<input type="text" name="age" value="age" id="age" />
 			</p>
 			<p>
 				<input type="radio" name="gender" value="male" checked> Male
@@ -875,7 +892,7 @@
 			</p>
 		</div>
 	</section>
-	<a href="#" class=" wayv-btn orange-bg blue-hover white-text">
+	<a href="#" class="next-tab wayv-btn orange-bg blue-hover white-text">
 		Proceed to Confirmation
 	</a>
 </fieldset>
@@ -1001,27 +1018,30 @@
 				</table>	
             </div>
 	</section>
+    <a href="#" class="wayv-btn blue-bg orange-hover next-form">Proceed to Breakdown</a>
 </fieldset>
 <fieldset class="tab">
-	<section id="personalizeExp" class="page-section">
+	<section id="costBreakdown" class="page-section">
+        <div class="wrapper-900">
 		<h2 class="section-title">Breakdown</h2>
+            <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
 		<p class="sub-title">Fill Your yacht with friends and WAYV travel staff.</p>
 		<div class="row">
-			<div class="col-6 additions">
+			<div class="col-6 breakdown">
 					<h3 class="yacht-title">	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />Crew</h3>
-					<ul id="breakdown-crew">
-						<li><span class="blue-text">Crew:</span>2</li>
-						<li><span class="blue-text">Travellers:</span>7</li>
+					<ul id="breakdown-crew" class="grey-bg">
+						<li><span class="blue-text">Crew:</span><span class="text-right">2 Guests</span></li>
 					</ul>
 				</div>
 				<div class="col-6">
 					<h3 class="yacht-title">	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />Cost Breakdown</h3>
-					<ul id="breakdown-crew">
-						<li><span class="blue-text">Cabin</span> <span class="orange-text">2000</span></li>
+					<ul id="breakdown-travellers">
 						<li><span class="blue-text">Travellers:</span>7</li>
 					</ul>
 					
 				</div>
+            		</div>
+
 				<div class="total orange-bg">
 						<p class="white-text">Grand Total: $XXXX USD</p>
 					</div>
@@ -1029,13 +1049,14 @@
 						<p class="white-text">Per Person Total: $XXXX USD</p>
 					</div>
 					<p class="disclaimer-text">When you book a cabin rather than a yacht, the Skipper and Hostess costs are included in the price. repudiandae sint et molestiae non recusandae</p>
-		</div>
+            </div>
 	</section>
 	<section class="page-section" id="paymentInstructions">
-		<h2 class="section-title orange-bg sand-border">Book Your Own Yacht</h2>
-		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+		<h2 class="orange-bg sand-border white-text">Payment Installments</h2>
+        		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+        <div class="wrapper-900">
 		<p class="sub-title">To secure your yacht, pay 10% of the total  booking cost today</p>
-		<table class="no-border blue-text" id="paymentTable">
+		<table class="no-border blue-text" id="paymentTable" cellspacing="0">
 					<tr class="due-today">
 						<td>Today</td>
 						<td>40%</td>
@@ -1051,21 +1072,120 @@
 						<td>30%</td>
 						<td class="orange-text">$2080 USD</td>
 					</tr>
-				</table>		
+				</table>
+            <p class="disclaimer-text">When you book a cabin rather than a yacht, the Skipper and Hostess costs are included in the price. repudiandae sint et molestiae non recusandae</p>
+        </div>
 	</section>
 	<section class="page-section" id="paypalPayment">
 		<h2 class="section-title">Payment</h2>
 		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
 		<p class="sub-title blue-text">WAYV OFFERS PAYMENT THOURGH PAYPAL</p>
 		<p class="pay-instructions">Click the link below to receive an email... nuet harum quidem rerum facilis est et expedita distinctiom harum quidem rerum.</p>
-		<a href="#" class="blue-bg orange-hover white-text">Link</a>
+		<input type="submit" class="wayv-btn blue-bg orange-hover white-text" value="Link to PayPal" name="submit">
 	</section>
 </fieldset>
     </div>
 </form>
+     <?php
+    
+    //declare everything
+$gender_slider_male = " ";
+    $gender_slider_female = " ";
+  $add_skipper = " ";
+    $add_hostess = " ";
+    $add_hostess1 = " ";
+    $add_hostess2 = " ";
+    $add_hostess3 = " ";
+    $add_hostess4 = " ";
+    $add_hostess5 = " ";
+    $add_hostess6 = " ";
+    $firstname = " ";
+    $lastname = " ";
+    $dob_month = " ";
+    $dob_day = " ";
+    $dob_year = " ";
+    $age = " ";
+    $contact_email = " ";
+    $contact_phone = " ";
+    $email = " ";
+    $phone = " ";
+     $address = " ";
+    $city = " ";
+    $pc_zip = " ";
+     $province = " ";
+    $nationality = " ";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $gender_slider_male = test_input($_POST["male"]);
+  $gender_slider_female = test_input($_POST["female"]);
+  $add_skipper = test_input($_POST["add-skipper"]);
+  $add_hostess = test_input($_POST["add-hostess"]);
+    ///maybe need to get rid of these on bottom of page
+   $add_hostess1 = test_input($_POST["add-hostess1"]);
+    $add_hostess2 = test_input($_POST["add-hostess2"]);
+    $add_hostess3 = test_input($_POST["add-hostess3"]);
+    $add_hostess4 = test_input($_POST["add-hostess4"]);
+    $add_hostess5 = test_input($_POST["add-hostess5"]);
+    $add_hostess6 = test_input($_POST["add-hostess6"]);
+   
+    //traveller info
+    
+    $firstname = test_input($_POST["firstname"]);
+    $lastname = test_input($_POST["lastname"]);
+    $dob_month = test_input($_POST["gMonth2"]);
+    $dob_day = test_input($_POST["day"]);
+    $dob_year = test_input($_POST["year"]);
+    $age = test_input($_POST["age"]);
+    $contact_email = test_input($_POST["contact-email"]);
+    $contact_phone = test_input($_POST["contact-phone"]);
+    $email = test_input($_POST["email"]);
+    $phone = test_input($_POST["usrtel"]);
+    $address = test_input($_POST["address1"]);
+    $city = test_input($_POST["city"]);
+    $pc_zip = test_input($_POST["pc-zip"]);
+    $province = test_input($_POST["province-states"]);
+    $nationality = test_input($_POST["nationality"]);
+    $gender = test_input($_POST["gender"]);
+
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+    ?>
+    <?php 
+    echo $gender_slider_male;
+echo $gender_slider_female;
+echo $add_skipper; 
+echo $add_hostess;
+echo $add_hostess1; 
+echo $add_hostess2; 
+echo $add_hostess3;
+echo $add_hostess4;
+echo $add_hostess5; 
+echo $add_hostess6; 
+echo $firstname;
+echo $lastname;
+echo $dob_month;
+echo $dob_day;
+echo $dob_year;
+echo age;
+echo $contact_email;
+echo $contact_phone;
+echo $email;
+echo $phone;
+echo $address;
+echo $city;
+echo $pc-zip;
+echo $province;
+echo $nationality;
+    ?>
+
 </body>
 <script>
-    $('.tab').click( function() {
+    $('.tab .next-form').click( function() {
         $(this).removeClass('active');
         $(this).next().addClass('active');
     });
