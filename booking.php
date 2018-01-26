@@ -1,183 +1,279 @@
-<?php //Booking page ?>
+<?php //Booking page
+
+
+$servername = "localhost";
+$username = "root";
+$password = "root";
+?>
+
 <!DOCTYPE html>
 
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WAYV Booking</title>
-  <meta name="keywords" content="Travel Booking">
-  <meta name="description" content="Lets book your next vacation.">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="multi-step-form.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WAYV Booking</title>
+    <meta name="keywords" content="Travel Booking">
+    <meta name="description" content="Lets book your next vacation.">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="multi-step-form.js"></script>
     <script src="jquery.steps.min.js"></script>
-  <link rel="stylesheet" href="booking-styles.css">
+    <link rel="stylesheet" href="booking-styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/rur4dbk.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
 </head>
-<body>
-   
-<section class="header-section">
-    <img src="img/booking-banner1.png" />
-	<div class="text-container">
-		<h1 class="white-text">Book Your Own Yacht</h1>
-	</div>
-</section>
-<section class="steps dark-blue-bg">
-    <div class="wrapper-900">
-    <ul id="setIndicator" class="white-text">
-        <li>Dates</li>
-        <li>Yacht</li>
-        <li>Personalize</li>
-        <li>Traveller Info</li>
-        <li>Confirmation</li>
-        <li>Payment</li>
-    </ul>
-    </div>
-</section>
-<form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="msform">
-<fieldset class="tab active" >
-<section id="travelDates" class="page-section">
-	<h2 class="section-title">Book Your Own Yacht</h2>
-	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
-	<p class="sub-title">Select Your Dates</p>
-	<h2>Insert Calendar here</h2>
-	  <input type="checkbox" name="tagalong" value="tagalong"> <p>Tag a long with us! <span class="orange-text">Show WAYV Travel Dates(?)</span></p>
-</section>
 
-<section id="numberTravellers" class="page-section">
-	<h2 class="section-title">Confirm Number of Travellers</h2>
-	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
-	<p class="sub-title">Fill Your Yachts With Friends and Travel Staff</p>
-	<div class="row">
-		<div class="col-6">
-			<p class="range-input">
-				Male: <input type="range" name="male" min="0" max="10">
-			</p>
-			<p class="range-input">
-				Female: <input type="range" name="female" min="0" max="10">
-			</p>
-			
-		</div>
-		<div class="col-6 ratio">
-			<h3 class="blue-text">Gender Ratio(?)</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas. </p>
-		</div>
-	</div>
-    <p class="staff-input"><input type="checkbox" name="add-skipper" value="skipper"> Add skipper</p>
-			<p class="staff-input"><input type="checkbox" name="add-hostess" value="hostess"> Add Hostess</p>
-	<div class="total-travellers">
-		<p class="total-text white-text">Traveller Total: 7</p>
-	</div>
-</section>
-<section class="page-section" id="selectYacht">
-	<h2 class="section-title">Select Your Yacht Style</h2>
-	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
-	<p class="sub-title blue-text">Use the Toggle to view alternative options.(?)</p>
-    <div class="wrapper-900">
-	<div class="slide-container">
-		<div class="row slider-row-padding">
-			<div class="col-6">
-                <div class="yacht-featured">
-                    <img src="img/feature-boat.png" alt="featured yacht image" />
-                </div>
-                <div class="row other-images">
-                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
-                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
-                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
-                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
-                </div>
-            </div>
-			<div class="col-6 yacht-details">
-				<h3 class="yacht-title">Yacht Option #1</h3>
-                <div class="indent">
-                    <p class="yacht-text starting-price orange-text">
-                        Starting at $XXXX
-                    </p>
-                    <p class="blue-text yacht-text">Description:</p>
-                    <p class="yacht-description-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas. 
-                    </p>
-                    <p class="blue-text yacht-text">Sleeps:</p>
-                    <p class="yacht-description-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-                    </p>
-                </div>
-				<div class="yacht-more-info">
-					<a href="#" class="wayv-btn orange-bg blue-hover">More Info</a>
-					<a href="#" class="wayv-btn orange-bg blue-hover">Select this yacht</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<body>
+
+    <section class="header-section">
+        <img src="img/booking-banner1.png" />
+        <div class="text-container">
+            <h1 class="white-text">Book Your Own Yacht</h1>
         </div>
-</section>
-	<section id="personalizeExp" class="page-section">
-		
-		<div class="row">
-			<div class="col-6 additions">
-                <h2 class="section-title">Personalize Your Experience</h2>
-		        <p class="sub-title blue-text">Make it A trip of a lifetime.</p>
-                <ul>
-                    <li><input type="checkbox" name="add-hostess1" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess2" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess3" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess4" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess5" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                    <li><input type="checkbox" name="add-hostess6" value="hostess"> <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p></li>
-                </ul>
-			</div>
-			<div class="col-6 booking-overview">
-				<h3 class="yacht-title">	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />Overview</h3>
-				<div class="yacht-selection">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="img/boat-booking.png" alt="yacht" class="yacht-selection-img" />
-                        </div>
-                        <div class="col-6 margin-more yacht-booking-details">
-                            <h4 class="blue-text">Yacht Option #1</h4>
-                            <p class="blue-text">Destination:</p>
-                            <p class="orange-text">Thailand</p>
-                            
-                        </div>
-                        
+    </section>
+    <section class="steps dark-blue-bg">
+        <div class="wrapper-900">
+            <ul id="setIndicator" class="white-text">
+                <li>Dates</li>
+                <li>Yacht</li>
+                <li>Personalize</li>
+                <li>Traveller Info</li>
+                <li>Confirmation</li>
+                <li>Payment</li>
+            </ul>
+        </div>
+    </section>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]);?>" id="msform">
+        <fieldset class="tab active">
+            <section id="travelDates" class="page-section">
+                <h2 class="section-title">Book Your Own Yacht</h2>
+                <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+                <p class="sub-title">Select Your Dates</p>
+                <div id="datepicker"></div>
+
+                <p>Date: <input type="text" id="datepicker2" disabled></p>
+                <input type="checkbox" name="tagalong" value="tagalong">
+                <p>Tag a long with us! <span class="orange-text">Show WAYV Travel Dates(?)</span></p>
+            </section>
+
+            <section id="numberTravellers" class="page-section">
+                <h2 class="section-title">Confirm Number of Travellers</h2>
+                <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+                <p class="sub-title">Fill Your Yachts With Friends and Travel Staff</p>
+                <div class="row">
+                    <div class="col-6">
+                        <p class="range-input">
+                            Male: <input type="range" name="male" min="0" max="10">
+                        </p>
+                        <p class="range-input">
+                            Female: <input type="range" name="female" min="0" max="10">
+                        </p>
+
                     </div>
-                    <p class="yacht-description-text grey-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas. 
+                    <div class="col-6 ratio">
+                        <h3 class="blue-text">Gender Ratio(?)</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas. </p>
+                    </div>
+                </div>
+                <p class="staff-input"><input type="checkbox" name="add-skipper" value="skipper"> Add skipper</p>
+                <p class="staff-input"><input type="checkbox" name="add-hostess" value="hostess"> Add Hostess</p>
+                <div class="total-travellers">
+                    <p class="total-text white-text">Traveller Total: 7</p>
+                </div>
+            </section>
+            <section class="page-section" id="selectYacht">
+                <h2 class="section-title">Select Your Yacht Style</h2>
+                <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+                <p class="sub-title blue-text">Use the Toggle to view alternative options.(?)</p>
+                <div class="wrapper-900">
+                    <div class="slide-container mySlides" style="width:100%;">
+                        <div class="row slider-row-padding">
+                            <div class="col-6">
+                                <div class="yacht-featured">
+                                    <img src="img/feature-boat.png" alt="featured yacht image" />
+                                </div>
+                                <div class="row other-images">
+                                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                                </div>
+                            </div>
+                            <div class="col-6 yacht-details">
+                                <h3 class="yacht-title">Yacht Option #1</h3>
+                                <div class="indent">
+                                    <p class="yacht-text starting-price orange-text">
+                                        Starting at $XXXX
+                                    </p>
+                                    <p class="blue-text yacht-text">Description:</p>
+                                    <p class="yacht-description-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas.
+                                    </p>
+                                    <p class="blue-text yacht-text">Sleeps:</p>
+                                    <p class="yacht-description-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                                <div class="yacht-more-info">
+                                    <a href="#" class="wayv-btn orange-bg blue-hover">More Info</a>
+                                    <div class="button-wrap">
+                                        <input class="hidden radio-label wayv-btn" type="radio" name="select_yacht" id="yes-button" value="yacht1" />
+                                        <label class="button-label wayv-btn orange-bg blue-hover" for="yes-button">
+      <h1>Select this Yacht</h1>
+    </label>
+                                        <!--
+    <input class="hidden radio-label" type="radio" name="select_yacht" id="no-button"  value="yacht1"/>
+    <label class="button-label wayv-btn orange-bg blue-hover" for="no-button">
+      <h1>No</h1>
+    </label>
+    <input class="hidden radio-label" type="radio" name="select_yacht" id="maybe-button"/>
+    <label class="button-label wayv-btn orange-bg blue-hover" for="maybe-button">
+      <h1>Maybe</h1>
+    </label>
+-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-container mySlides" style="width:100%;">
+                        <div class="row slider-row-padding">
+                            <div class="col-6">
+                                <div class="yacht-featured">
+                                    <img src="img/feature-boat.png" alt="featured yacht image" />
+                                </div>
+                                <div class="row other-images">
+                                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                                </div>
+                            </div>
+                            <div class="col-6 yacht-details">
+                                <h3 class="yacht-title">Yacht Option #2</h3>
+                                <div class="indent">
+                                    <p class="yacht-text starting-price orange-text">
+                                        Starting at $XXXX
+                                    </p>
+                                    <p class="blue-text yacht-text">Description:</p>
+                                    <p class="yacht-description-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas.
+                                    </p>
+                                    <p class="blue-text yacht-text">Sleeps:</p>
+                                    <p class="yacht-description-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                                <div class="yacht-more-info">
+                                    <a href="#" class="wayv-btn orange-bg blue-hover">More Info</a>
+                                    <div class="button-wrap">
+                                        <input class="hidden radio-label wayv-btn" type="radio" name="select_yacht" id="yes-button" value="yacht2" />
+                                        <label class="button-label wayv-btn orange-bg blue-hover" for="yes-button">
+      <h1>Select this Yacht</h1>
+    </label>
+                                        <!--
+    <input class="hidden radio-label" type="radio" name="select_yacht" id="no-button"  value="yacht1"/>
+    <label class="button-label wayv-btn orange-bg blue-hover" for="no-button">
+      <h1>No</h1>
+    </label>
+    <input class="hidden radio-label" type="radio" name="select_yacht" id="maybe-button"/>
+    <label class="button-label wayv-btn orange-bg blue-hover" for="maybe-button">
+      <h1>Maybe</h1>
+    </label>
+-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+                </div>
+            </section>
+            <section id="personalizeExp" class="page-section">
+
+                <div class="row">
+                    <div class="col-6 additions">
+                        <h2 class="section-title">Personalize Your Experience</h2>
+                        <p class="sub-title blue-text">Make it A trip of a lifetime.</p>
+                        <ul>
+                            <li><input type="checkbox" name="add-hostess1" value="hostess">
+                                <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p>
+                            </li>
+                            <li><input type="checkbox" name="add-hostess2" value="hostess">
+                                <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p>
+                            </li>
+                            <li><input type="checkbox" name="add-hostess3" value="hostess">
+                                <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p>
+                            </li>
+                            <li><input type="checkbox" name="add-hostess4" value="hostess">
+                                <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p>
+                            </li>
+                            <li><input type="checkbox" name="add-hostess5" value="hostess">
+                                <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p>
+                            </li>
+                            <li><input type="checkbox" name="add-hostess6" value="hostess">
+                                <p>Add Skipper / Hostess <span class="add-price orange-text">[+100]</span>(?)</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 booking-overview">
+                        <h3 class="yacht-title"> <img src="img/blue-wayv.png" alt="" class="wayv-icon" />Overview</h3>
+                        <div class="yacht-selection">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="img/boat-booking.png" alt="yacht" class="yacht-selection-img" />
+                                </div>
+                                <div class="col-6 margin-more yacht-booking-details">
+                                    <h4 class="blue-text">Yacht Option #1</h4>
+                                    <p class="blue-text">Destination:</p>
+                                    <p class="orange-text">Thailand</p>
+
+                                </div>
+
+                            </div>
+                            <p class="yacht-description-text grey-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas.
                             </p>
-				</div>
-				<ul id="addOn">
-					<li><span class="blue-text">Add On:</span></li>
-					<li><span class="blue-text">Add On:</span></li>
-					<li><span class="blue-text">Add On:</span></li>
-					<li><span class="blue-text">Add On:</span></li>
-					<li><span class="blue-text">Add On:</span></li>
-				</ul>
-				<div class="total dark-blue-bg">
-					<p class="white-text">Total: $XXXX USD</p>
-				</div>
-				<div class="per-person orange-bg">
-					<p class="white-text">Per Person Total: $XXXX USD</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--<input type="button" name="next" class="wayv-btn next blue-bg orange-hover white-text" value="Proceed to Traveller Info">-->
-    <a href="#" class="next-form wayv-btn next blue-bg orange-hover white-text">Proceed to Traveller Info</a>
-		
-</fieldset>
-<fieldset class="tab">
-	<section class="page-section traveller-info">
-		<h2 class="section-title">Lead Traveller Information</h2>
-		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas.</p>
-		<div class="row">
-            <div class="col-6 offset-3">
-			<p>
-				<input type="text" name="firstname" value="First Name" id="firstName">
-				<input type="text" name="lastname" value="Last Name" id="lastName">
-			</p>
-			<p>
-				DOB <select id='gMonth2' name="gMonth2" >
+                        </div>
+                        <ul id="addOn">
+                            <li><span class="blue-text">Add On:</span></li>
+                            <li><span class="blue-text">Add On:</span></li>
+                            <li><span class="blue-text">Add On:</span></li>
+                            <li><span class="blue-text">Add On:</span></li>
+                            <li><span class="blue-text">Add On:</span></li>
+                        </ul>
+                        <div class="total dark-blue-bg">
+                            <p class="white-text">Total: $XXXX USD</p>
+                        </div>
+                        <div class="per-person orange-bg">
+                            <p class="white-text">Per Person Total: $XXXX USD</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+         
+            <a href="#" class="next-form wayv-btn next blue-bg orange-hover white-text">Proceed to Traveller Info</a>
+
+        </fieldset>
+        <fieldset class="tab">
+            <section class="page-section traveller-info">
+                <h2 class="section-title">Lead Traveller Information</h2>
+                <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas.</p>
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <p>
+                            <input type="text" name="firstname" value="First Name" id="firstName">
+                            <input type="text" name="lastname" value="Last Name" id="lastName">
+                        </p>
+                        <p>
+                            DOB <select id='gMonth2' name="gMonth2">
 					    <option value=''>--Select Month--</option>
 					    <option selected value='1'>January</option>
 					    <option value='2'>February</option>
@@ -191,8 +287,8 @@
 					    <option value='10'>October</option>
 					    <option value='11'>November</option>
 					    <option value='12'>December</option>
-				    </select> 
-				    <select name="day">
+				    </select>
+                            <select name="day">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -225,7 +321,7 @@
           <option value="30">30</option>
           <option value="31">31</option>
      </select>
-     <select name="year">
+                            <select name="year">
           <option value="2014">2014</option>
           <option value="2013">2013</option>
           <option value="2012">2012</option>
@@ -342,27 +438,27 @@
           <option value="1901">1901</option>
           <option value="1900">1900</option>
      </select>
-     		<input type="text" name="age" value="age" id="age" />
-			</p>
-			<p>
-				<input type="radio" name="gender" value="male" checked> Male
-  				<input type="radio" name="gender" value="female"> Female
-				<input type="checkbox" name="contact-email" value="contact-email"> Contact me via E-Mail
-				<input type="checkbox" name="contact-email" value="contact-phone"> Contact me by Phone
-			</p>
-			<p>
-  				<input type="email" name="email" id="email" placeholder="E-Mail">
-  			    <input type="tel" name="usrtel" id="phone">
-			</p>
-			<p>
-				<input type="text" name="address1" id="address1" value="address1" placeholder="Address">
-			</p>
-			<p>
-				<input type="text" name="city" id="city" value="city" placeholder="City">
-				<input type="text" name="pc-zip" id="pc-zip" value="pc-zip" placeholder="Postal Code/ZIP">
-			</p>
-			<p>
-			<select name="province-states" id="provinceStates">
+                            <input type="text" name="age" value="age" id="age" />
+                        </p>
+                        <p>
+                            <input type="radio" name="gender" value="male" checked> Male
+                            <input type="radio" name="gender" value="female"> Female
+                            <input type="checkbox" name="contact-email" value="contact-email"> Contact me via E-Mail
+                            <input type="checkbox" name="contact-email" value="contact-phone"> Contact me by Phone
+                        </p>
+                        <p>
+                            <input type="email" name="email" id="email" placeholder="E-Mail">
+                            <input type="tel" name="usrtel" id="phone">
+                        </p>
+                        <p>
+                            <input type="text" name="address1" id="address1" value="address1" placeholder="Address">
+                        </p>
+                        <p>
+                            <input type="text" name="city" id="city" value="city" placeholder="City">
+                            <input type="text" name="pc-zip" id="pc-zip" value="pc-zip" placeholder="Postal Code/ZIP">
+                        </p>
+                        <p>
+                            <select name="province-states" id="provinceStates">
 			<option value="AB">Alberta</option>
 	<option value="BC">British Columbia</option>
 	<option value="MB">Manitoba</option>
@@ -429,8 +525,8 @@
 	<option value="WV">West Virginia</option>
 	<option value="WI">Wisconsin</option>
 	<option value="WY">Wyoming</option>
-</select>	
-				<select name="country" id="country">
+</select>
+                            <select name="country" id="country">
 	<option value="AFG">Afghanistan</option>
 	<option value="ALA">Åland Islands</option>
 	<option value="ALB">Albania</option>
@@ -681,9 +777,9 @@
 	<option value="ZMB">Zambia</option>
 	<option value="ZWE">Zimbabwe</option>
 </select>
-			</p>
-			<p>
-				<select name="nationality">
+                        </p>
+                        <p>
+                            <select name="nationality">
   <option value="">-- select one --</option>
   <option value="afghan">Afghan</option>
   <option value="albanian">Albanian</option>
@@ -878,215 +974,219 @@
   <option value="zambian">Zambian</option>
   <option value="zimbabwean">Zimbabwean</option>
 </select>
-			</p>
-		</div>
-		</div>
-        <div class="add-traveller orange-bg">
-			<p class="white-text">
-				Add Traveller <span class="light-blue-text">+</span>
-			</p>
-		</div>
-		<div class="invite-friends dark-blue-bg">
-			<p class="white-text">
-				Invite Friends via Facebook <span class="light-blue-text">+</span>
-			</p>
-		</div>
-	</section>
-	<a href="#" class="next-tab wayv-btn orange-bg blue-hover white-text">
+                        </p>
+                    </div>
+                </div>
+                <div class="add-traveller orange-bg">
+                    <p class="white-text">
+                        Add Traveller <span class="light-blue-text">+</span>
+                    </p>
+                </div>
+                <div class="invite-friends dark-blue-bg">
+                    <p class="white-text">
+                        Invite Friends via Facebook <span class="light-blue-text">+</span>
+                    </p>
+                </div>
+            </section>
+            <a href="#" class="next wayv-btn orange-bg blue-hover white-text">
 		Proceed to Confirmation
 	</a>
-</fieldset>
-<fieldset class="tab">
-	<section class="page-section" id="yachtConfirmation">
-		<h2 class="section-title vacation-name">Bali Vacation</h2>
-		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
-		<p class="sub-title blue-text">October 14 - October 21, 2018</p>
-		<div class="row">
-			<div class="col-6">
-                <div class="yacht-featured">
-                    <img src="img/feature-boat.png" alt="featured yacht image" />
-                </div>
+        </fieldset>
+        <fieldset class="tab">
+            <section class="page-section" id="yachtConfirmation">
+                <h2 class="section-title vacation-name">Bali Vacation</h2>
+                <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+                <p class="sub-title blue-text">October 14 - October 21, 2018</p>
                 <div class="row">
-                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
-                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
-                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
-                    <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                    <div class="col-6">
+                        <div class="yacht-featured">
+                            <img src="img/feature-boat.png" alt="featured yacht image" />
+                        </div>
+                        <div class="row">
+                            <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                            <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                            <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                            <div class="col-4"><img src="img/boat-image.png" alt="boat image" /></div>
+                        </div>
+                    </div>
+                    <div class="col-6 yacht-confirmation-details">
+                        <h3 class="yacht-title">The Marilynn</h3>
+                        <p class="yacht-text starting-price orange-text">
+                            Cost Per Person: $XXXX
+                        </p>
+                        <p class="blue-text yacht-text">Description:</p>
+                        <p class="yacht-description-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas.
+                        </p>
+                        <p class="blue-text yacht-text">Departs From:</p>
+                        <p class="yacht-description-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="yacht-more-info">
+                            <a href="#" class="wayv-btn orange-bg blue-hover">More Info</a>
+                            <a href="#" class="wayv-btn orange-bg blue-hover">Select this yacht</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-			<div class="col-6 yacht-confirmation-details">
-				<h3 class="yacht-title">The Marilynn</h3>
-				<p class="yacht-text starting-price orange-text">
-					Cost Per Person: $XXXX
-				</p>
-				<p class="blue-text yacht-text">Description:</p>
-				<p class="yacht-description-text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id fermentum magna, at tincidunt enim. Nullam condimentum semper ex quis egestas. 
-				</p>
-				<p class="blue-text yacht-text">Departs From:</p>
-				<p class="yacht-description-text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-				</p>
-				<div class="yacht-more-info">
-					<a href="#" class="wayv-btn orange-bg blue-hover">More Info</a>
-					<a href="#" class="wayv-btn orange-bg blue-hover">Select this yacht</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="page-section" id="yachtInfo">
-		<div class="wrapper-900">
-        <div class="row">
-			<div class="col-6">
-				<h3 class="blue-text">What's Included</h3>
-				<ul id="included">
-					<li>Yacht For 7 days</li>
-					<li>Professional Skipper</li>
-					<li>Access to all WAYV events</li>
-					<li>Tailored itinerary</li>
-					<li>Dinghy & outboard engine</li>
-					<li>Yacht equipment</li>
-					<li>GPS & nautical charts</li>
-					<li>Stereo & cockpit speakers</li>
-					<li>Final Cleaning of the Yacht</li>
-				</ul>
-					
-			</div>
-			<div class="col-6">
-					<h3 class="blue-text">Vessel Layout</h3>
-					<img src="#" alt="vessel layout">
-					<a href="#" class="wayv-btn blue-bg orange-hover white-text">Download Full Specs</a>
-					<h3 class="blue-text">Sleeping Arrangements</h3>
-					<p class="grey-text yacht-text-smaller">This yacht sleeps up to 12 people:</p>
-					<ul class="grey-text">
-						<li>4 double cabins: 8 spots</li>
-						<li>1 bunk bed cabin: 2 spots</li>
-						<li>1 saloon: 1 spot</li>
-						<li>1 skipper cabin: 1 spot (for WAYV staff)</li>
-					</ul>
-            </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                <h3 class="blue-text">Security Deposit</h3>		
-				<p class="grey-text">Usually Thailand is a no visa requirement for stay under 30 days. For longer stays, visitors can apply for a 2 x 2 month Visa in any Thai embassy in the world..</p>	
+            </section>
+            <section class="page-section" id="yachtInfo">
+                <div class="wrapper-900">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3 class="blue-text">What's Included</h3>
+                            <ul id="included">
+                                <li>Yacht For 7 days</li>
+                                <li>Professional Skipper</li>
+                                <li>Access to all WAYV events</li>
+                                <li>Tailored itinerary</li>
+                                <li>Dinghy & outboard engine</li>
+                                <li>Yacht equipment</li>
+                                <li>GPS & nautical charts</li>
+                                <li>Stereo & cockpit speakers</li>
+                                <li>Final Cleaning of the Yacht</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-6">
+                            <h3 class="blue-text">Vessel Layout</h3>
+                            <img src="#" alt="vessel layout">
+                            <a href="#" class="wayv-btn blue-bg orange-hover white-text">Download Full Specs</a>
+                            <h3 class="blue-text">Sleeping Arrangements</h3>
+                            <p class="grey-text yacht-text-smaller">This yacht sleeps up to 12 people:</p>
+                            <ul class="grey-text">
+                                <li>4 double cabins: 8 spots</li>
+                                <li>1 bunk bed cabin: 2 spots</li>
+                                <li>1 saloon: 1 spot</li>
+                                <li>1 skipper cabin: 1 spot (for WAYV staff)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h3 class="blue-text">Security Deposit</h3>
+                            <p class="grey-text">Usually Thailand is a no visa requirement for stay under 30 days. For longer stays, visitors can apply for a 2 x 2 month Visa in any Thai embassy in the world..</p>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="blue-text">Extras</h3>
+                            <p class="grey-text yacht-text-smaller">Usually Thailand is a no visa requirement for stay under 30 days. For longer stays, visitors can apply for a 2 x 2 month Visa in any Thai embassy in the world..</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 destination-list">
+                            <h3>Additional Costs</h3>
+                            <ul>
+                                <li>Yacht deposit to be paid upon check-in</li>
+                                <li>Mooring fee(s)</li>
+                                <li>Skipper, Chef and Crew gratuity</li>
+                                <li>Flights</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
                 </div>
-                <div class="col-6">
-					<h3 class="blue-text">Extras</h3>
-					<p class="grey-text yacht-text-smaller">Usually Thailand is a no visa requirement for stay under 30 days. For longer stays, visitors can apply for a 2 x 2 month Visa in any Thai embassy in the world..</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-6 destination-list">
-							<h3>Additional Costs</h3>
-							<ul>
-							<li>Yacht deposit to be paid upon check-in</li>
-							<li>Mooring fee(s)</li>
-							<li>Skipper, Chef and Crew gratuity</li>
-							<li>Flights</li>
-							</ul>
-	
-			</div>
+            </section>
+            <section class="page-section" id="AddOns">
+                <div class="wrapper-900">
+                    <h2 class="section-title vacation-name">Add-Ons</h2>
+                    <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+                    <p class="sub-title blue-text">October 14 - October 21, 2018</p>
+                    <table class="no-border blue-text" cellspacing="0" id="addonTable">
+                        <tr class="due-today">
+                            <td class="blue-text">Add On:</td>
+                            <td>Add Skipper/Hostess</td>
+                            <td class="orange-text">[+100](?)</td>
+                        </tr>
+                        <tr>
+                            <td class="blue-text">Add On:</td>
+                            <td>Add Skipper/Hostess</td>
+                            <td class="orange-text">[+100](?)</td>
+                        </tr>
+                        <tr>
+                            <td class="blue-text">Add On:</td>
+                            <td>Add Skipper/Hostess</td>
+                            <td class="orange-text">[+100](?)</td>
+                        </tr>
+                        <tr class="dark-blue-bg total-row">
+                            <td class="white-text text-left" colspan="2">Total Cost of Add-ons</td>
+                            <td class="white-text">$XXXX USD</td>
+                        </tr>
+                        <tr class="orange-bg total-row">
+                            <td class="white-text text-left" colspan="2">Total Cost of Add-ons Per Person</td>
+                            <td class="white-text">$XXXX USD</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <a href="#" class="wayv-btn blue-bg orange-hover next">Proceed to Breakdown</a>
+        </fieldset>
+        <fieldset class="tab">
+            <section id="costBreakdown" class="page-section">
+                <div class="wrapper-900">
+                    <h2 class="section-title">Breakdown</h2>
+                    <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+                    <p class="sub-title">Fill Your yacht with friends and WAYV travel staff.</p>
+                    <div class="row">
+                        <div class="col-6 breakdown">
+                            <h3 class="yacht-title"> <img src="img/blue-wayv.png" alt="" class="wayv-icon" />Crew</h3>
+                            <ul id="breakdown-crew" class="grey-bg">
+                                <li><span class="blue-text">Crew:</span><span class="text-right">2 Guests</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="yacht-title"> <img src="img/blue-wayv.png" alt="" class="wayv-icon" />Cost Breakdown</h3>
+                            <ul id="breakdown-travellers">
+                                <li><span class="blue-text">Travellers:</span>7</li>
+                            </ul>
 
-		</div>
-     </div>
-	</section>
-	<section class="page-section" id="AddOns">
-        <div class="wrapper-900">
-		<h2 class="section-title vacation-name">Add-Ons</h2>
-		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
-		<p class="sub-title blue-text">October 14 - October 21, 2018</p>
-		<table class="no-border blue-text" cellspacing="0" id="addonTable">
-					<tr class="due-today">
-						<td class="blue-text">Add On:</td>
-						<td>Add Skipper/Hostess</td>
-						<td class="orange-text">[+100](?)</td>
-					</tr>
-					<tr>
-						<td class="blue-text">Add On:</td>
-						<td>Add Skipper/Hostess</td>
-						<td class="orange-text">[+100](?)</td>
-					</tr>
-					<tr>
-						<td class="blue-text">Add On:</td>
-						<td>Add Skipper/Hostess</td>
-						<td class="orange-text">[+100](?)</td>
-					</tr>
-					<tr class="dark-blue-bg total-row"><td class="white-text text-left" colspan="2">Total Cost of Add-ons</td>
-						<td class="white-text">$XXXX USD</td></tr>
-					<tr class="orange-bg total-row"><td class="white-text text-left" colspan="2">Total Cost of Add-ons Per Person</td>
-						<td class="white-text">$XXXX USD</td></tr>
-				</table>	
-            </div>
-	</section>
-    <a href="#" class="wayv-btn blue-bg orange-hover next-form">Proceed to Breakdown</a>
-</fieldset>
-<fieldset class="tab">
-	<section id="costBreakdown" class="page-section">
-        <div class="wrapper-900">
-		<h2 class="section-title">Breakdown</h2>
-            <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
-		<p class="sub-title">Fill Your yacht with friends and WAYV travel staff.</p>
-		<div class="row">
-			<div class="col-6 breakdown">
-					<h3 class="yacht-title">	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />Crew</h3>
-					<ul id="breakdown-crew" class="grey-bg">
-						<li><span class="blue-text">Crew:</span><span class="text-right">2 Guests</span></li>
-					</ul>
-				</div>
-				<div class="col-6">
-					<h3 class="yacht-title">	<img src="img/blue-wayv.png" alt="" class="wayv-icon" />Cost Breakdown</h3>
-					<ul id="breakdown-travellers">
-						<li><span class="blue-text">Travellers:</span>7</li>
-					</ul>
-					
-				</div>
-            		</div>
+                        </div>
+                    </div>
 
-				<div class="total orange-bg">
-						<p class="white-text">Grand Total: $XXXX USD</p>
-					</div>
-					<div class="per-person dark-blue-bg">
-						<p class="white-text">Per Person Total: $XXXX USD</p>
-					</div>
-					<p class="disclaimer-text">When you book a cabin rather than a yacht, the Skipper and Hostess costs are included in the price. repudiandae sint et molestiae non recusandae</p>
-            </div>
-	</section>
-	<section class="page-section" id="paymentInstructions">
-		<h2 class="orange-bg sand-border white-text">Payment Installments</h2>
-        		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
-        <div class="wrapper-900">
-		<p class="sub-title">To secure your yacht, pay 10% of the total  booking cost today</p>
-		<table class="no-border blue-text" id="paymentTable" cellspacing="0">
-					<tr class="due-today">
-						<td>Today</td>
-						<td>40%</td>
-						<td class="orange-text">$3000 USD</td>
-					</tr>
-					<tr>
-						<td>15 February, 2018</td>
-						<td>30%</td>
-						<td class="orange-text">$2080 USD</td>
-					</tr>
-					<tr>
-						<td>30 March, 2018</td>
-						<td>30%</td>
-						<td class="orange-text">$2080 USD</td>
-					</tr>
-				</table>
-            <p class="disclaimer-text">When you book a cabin rather than a yacht, the Skipper and Hostess costs are included in the price. repudiandae sint et molestiae non recusandae</p>
+                    <div class="total orange-bg">
+                        <p class="white-text">Grand Total: $XXXX USD</p>
+                    </div>
+                    <div class="per-person dark-blue-bg">
+                        <p class="white-text">Per Person Total: $XXXX USD</p>
+                    </div>
+                    <p class="disclaimer-text">When you book a cabin rather than a yacht, the Skipper and Hostess costs are included in the price. repudiandae sint et molestiae non recusandae</p>
+                </div>
+            </section>
+            <section class="page-section" id="paymentInstructions">
+                <h2 class="orange-bg sand-border white-text">Payment Installments</h2>
+                <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+                <div class="wrapper-900">
+                    <p class="sub-title">To secure your yacht, pay 10% of the total booking cost today</p>
+                    <table class="no-border blue-text" id="paymentTable" cellspacing="0">
+                        <tr class="due-today">
+                            <td>Today</td>
+                            <td>40%</td>
+                            <td class="orange-text">$3000 USD</td>
+                        </tr>
+                        <tr>
+                            <td>15 February, 2018</td>
+                            <td>30%</td>
+                            <td class="orange-text">$2080 USD</td>
+                        </tr>
+                        <tr>
+                            <td>30 March, 2018</td>
+                            <td>30%</td>
+                            <td class="orange-text">$2080 USD</td>
+                        </tr>
+                    </table>
+                    <p class="disclaimer-text">When you book a cabin rather than a yacht, the Skipper and Hostess costs are included in the price. repudiandae sint et molestiae non recusandae</p>
+                </div>
+            </section>
+            <section class="page-section" id="paypalPayment">
+                <h2 class="section-title">Payment</h2>
+                <img src="img/blue-wayv.png" alt="" class="wayv-icon" />
+                <p class="sub-title blue-text">WAYV OFFERS PAYMENT THOURGH PAYPAL</p>
+                <p class="pay-instructions">Click the link below to receive an email... nuet harum quidem rerum facilis est et expedita distinctiom harum quidem rerum.</p>
+                <input type="submit" class="wayv-btn blue-bg orange-hover white-text" value="Link to PayPal" name="submit">
+            </section>
+        </fieldset>
         </div>
-	</section>
-	<section class="page-section" id="paypalPayment">
-		<h2 class="section-title">Payment</h2>
-		<img src="img/blue-wayv.png" alt="" class="wayv-icon" />
-		<p class="sub-title blue-text">WAYV OFFERS PAYMENT THOURGH PAYPAL</p>
-		<p class="pay-instructions">Click the link below to receive an email... nuet harum quidem rerum facilis est et expedita distinctiom harum quidem rerum.</p>
-		<input type="submit" class="wayv-btn blue-bg orange-hover white-text" value="Link to PayPal" name="submit">
-	</section>
-</fieldset>
-    </div>
-</form>
-     <?php
+    </form>
+    <?php
     
     //declare everything
 $gender_slider_male = " ";
@@ -1145,8 +1245,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $province = test_input($_POST["province-states"]);
     $nationality = test_input($_POST["nationality"]);
     $gender = test_input($_POST["gender"]);
+    
 
 }
+   
 
 function test_input($data) {
   $data = trim($data);
@@ -1155,7 +1257,7 @@ function test_input($data) {
   return $data;
 }
     ?>
-    <?php 
+        <?php 
     echo $gender_slider_male;
 echo $gender_slider_female;
 echo $add_skipper; 
@@ -1181,13 +1283,154 @@ echo $city;
 echo $pc-zip;
 echo $province;
 echo $nationality;
-    ?>
 
+    if(isset($_POST['submit'])){
+        
+    try {
+    $conn = new PDO("mysql:host=$servername;dbname=wayv_booking", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+    $sql = "INSERT INTO wayv_traveller (traveller_fname, traveller_lname, traveller_dob_year, traveller_dob_month, traveller_dob_day, traveller_age, traveller_email, traveller_phone, traveller_address, traveller_city, traveller_pc_zip, traveller_province, traveller_nationality, traveller_gender) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $the_array = array($firstname, $lastname, $dob_year, $dob_month, $dob_day, $age, $email, $phone, $address, $city, $pc_zip, $province, $nationality, $gender);
+    // use exec() because no results are returned
+    $conn = $conn->prepare($sql);
+        echo "New record created successfully";
+    $conn->execute($the_array);
+    
+    }
+catch(PDOException $e)
+    {
+    echo $sql . "<br>" . $e->getMessage();
+    }
+        echo "form stuff";
+    }
+$conn = null;   
+    
+    ?>
+        <script>
+      //jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+	
+	
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".submit").click(function(){
+	return false;
+})
+        </script>
+        <script>
+        $(function() {
+            $('#datepicker').datepicker({
+                numberOfMonths: 2,
+                onSelect: function(dateText) {
+                    $('#datepicker2').datepicker("setDate", $(this).datepicker("getDate"));
+                }
+            });
+        });
+
+        $(function() {
+            $("#datepicker2").datepicker();
+        });
+    </script>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
 <script>
-    $('.tab .next-form').click( function() {
+    $('.tab .next-form').click(function() {
         $(this).removeClass('active');
         $(this).next().addClass('active');
     });
 </script>
+
 </html>

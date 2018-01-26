@@ -597,3 +597,184 @@ padding:.5rem 0;
     width: 100%;
     text-align: center;
 }
+#print-array {
+    position:fixed;
+    top:0;
+    right:0;
+    padding: 20px;
+}
+.ui-datepicker td {
+    border: none !important;
+    padding:0 !important;
+}
+.ui-datepicker td a {
+    width:74px !important;
+    height: 74px;
+    color:#004764 !important;
+    margin:0;
+}
+.ui-datepicker tr:nth-child(odd) td:nth-child(odd) a, .ui-state-disabled:nth-child(odd) {
+    background-color: #e1e1e1;
+    opacity: 1 !important;
+}
+.ui-datepicker tr:nth-child(odd) td:nth-child(even) a, .ui-state-disabled:nth-child(even) {
+    background-color: #f1f1f1;
+    opacity: 1 !important;
+}
+.ui-datepicker tr:nth-child(even) td:nth-child(even) a {
+    background-color: #e1e1e1;
+}
+.ui-datepicker tr:nth-child(even) td:nth-child(odd) a {
+    background-color: #f1f1f1;
+}
+.ui-datepicker.ui-datepicker-multi {
+    width: 100%!important;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+    width: auto !important;
+    
+}
+.ui-datepicker th {
+    color:#fff;
+    background-color: #f15f25;
+    font-weight: normal !important;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    
+    color: #004764 !important;
+    font-size: 36px;
+    font-family: "lato",sans-serif !important;
+}
+.ui-widget-header {
+    background-color: transparent !important;
+    border:none !important;
+}
+.ui-widget.ui-widget-content {
+    border: none !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default {
+    border: none !important;
+}
+.ui-widget {
+    font-family: "omnes-pro",sans-serif !important;
+    font-family: "omnes-pro",sans-serif !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active {
+    background-color: #f15f25 !important; 
+    color: #fff !important;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    top: 245px !important;
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    background-image: url(img/arrow-back.png);
+    background-repeat: no-repeat;
+}
+
+.ui-datepicker .ui-datepicker-prev:hover {
+    background-image: url(img/arrow-back.png) !important;
+    background-repeat: no-repeat !important;
+}
+
+.ui-datepicker .ui-datepicker-next {
+    background-image: url(img/arrow-forward.png);
+    background-repeat: no-repeat;
+}
+.ui-datepicker .ui-datepicker-next:hover {
+    background-image: url(img/arrow-forward.png) !important;
+    background-repeat: no-repeat !important:;
+}
+.ui-icon {
+    display: none !important;
+}
+.ui-state-hover {
+    border: none !important;
+    background: none !important;
+}
+.button-wrap {
+  position: relative;
+    text-align: right;
+    top: 50%;
+    margin-top: -3.5em;
+}
+@media (max-width: 40em) {
+  .button-wrap {
+    margin-top: -1.5em;
+  }
+}
+
+.button-label {
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.button-label h1 {
+  font-size: 1em;
+  font-family: "Lato", sans-serif;
+    margin: 0;
+}
+
+.button-label:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 40em) {
+  .button-label {
+    padding: 0em 1em 3px;
+    margin: 0.25em;
+  }
+}
+
+#yes-button:checked + .button-label {
+  background: #47cdd2;
+  color: #efefef;
+}
+#yes-button:checked + .button-label:hover {
+  background: #29b765;
+  color: #e2e2e2;
+}
+
+#no-button:checked + .button-label {
+  background: #D91E18;
+  color: #efefef;
+}
+#no-button:checked + .button-label:hover {
+  background: #c21b15;
+  color: #e2e2e2;
+}
+
+#maybe-button:checked + .button-label {
+  background: #4183D7;
+  color: #efefef;
+}
+#maybe-button:checked + .button-label:hover {
+  background: #2c75d2;
+  color: #e2e2e2;
+}
+
+.hidden {
+  display: none;
+}
+.mySlides {
+    display: none;
+}
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
